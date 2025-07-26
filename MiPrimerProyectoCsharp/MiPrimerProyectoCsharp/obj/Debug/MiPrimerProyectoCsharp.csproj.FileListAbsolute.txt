@@ -8,3 +8,4 @@ C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025.git\MiPrimerProyectoCsharp\Mi
 C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025.git\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.csproj.CoreCompileInputs.cache
 C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025.git\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.exe
 C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025.git\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.pdb
+C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025.git\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.exe.config
