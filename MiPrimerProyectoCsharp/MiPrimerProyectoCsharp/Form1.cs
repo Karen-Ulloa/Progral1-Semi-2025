@@ -24,6 +24,6 @@ namespace MiPrimerProyectoCsharp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            lblSaludo.Text = "Hola" + txtNombre.Text + "" + "!";
+            lblSaludo.Text = "Hola" + txtNombre.Text + "!";
     }
 }
