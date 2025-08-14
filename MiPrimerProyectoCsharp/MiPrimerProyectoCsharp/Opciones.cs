@@ -24,28 +24,59 @@ namespace MiPrimerProyectoCsharp
             num1 = Double.Parse(txtnum1.Text);
 
             num2 = double.Parse(txtnum2.Text);
-             
-            if (optSuma.Checked) {
+
+            if (optSuma.Checked)
+            {
                 respuesta = num1 + num2;
             }
-            if (optResta.Checked) {
+            if (optResta.Checked)
+            {
                 respuesta = num1 - num2;
             }
-            if (optMultiplicación.Checked) {
+            if (optMultiplicación.Checked)
+            {
                 respuesta = num1 * num2;
             }
-            if (optDivisión.Checked) {
+            if (optDivisión.Checked)
+            {
                 respuesta = num1 / num2;
             }
-            if (optExponente.Checked)  {
+            if (optExponente.Checked)
+            {
                 respuesta = Math.Pow(num1, num2);
             }
             if (optPorcentaje.Checked)
             {
                 respuesta = (num1 / num2) * 100;
             }
-
+            if (optFactorial.Checked)
+            {
+                respuesta = (int)num1;
+                for (int i = (int)num1 - 1; i > 1; i--)
+                {
+                    respuesta *= i;
+                }
+            }
             lblrespuesta.Text = "respuesta: " + respuesta;
+
+            if (optPrimo.Checked)
+            {
+                int i = 1, acum = 0;
+                while (i <= num1 && acum<3)  {
+                    if (num1%i==0) {
+                        acum++;
+                    }
+                    i++;
+                }
+                if (acum <= 2)
+                {
+                    lblrespuesta.Text = "respuesta: " + num1 + "Es +primo";
+                }
+                else
+                {
+                    lblrespuesta.Text = "respuesta: " + num1 + "NO es +primo";
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

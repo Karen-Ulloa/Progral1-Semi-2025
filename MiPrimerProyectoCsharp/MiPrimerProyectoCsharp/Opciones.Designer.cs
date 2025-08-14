@@ -43,6 +43,8 @@
             this.optSuma = new System.Windows.Forms.RadioButton();
             this.cboOpciones = new System.Windows.Forms.ComboBox();
             this.btnCalcularOpciones = new System.Windows.Forms.Button();
+            this.optFactorial = new System.Windows.Forms.RadioButton();
+            this.optPrimo = new System.Windows.Forms.RadioButton();
             this.gbOpciones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +101,8 @@
             // 
             // gbOpciones
             // 
+            this.gbOpciones.Controls.Add(this.optPrimo);
+            this.gbOpciones.Controls.Add(this.optFactorial);
             this.gbOpciones.Controls.Add(this.optPorcentaje);
             this.gbOpciones.Controls.Add(this.optExponente);
             this.gbOpciones.Controls.Add(this.optDivisión);
@@ -201,6 +205,28 @@
             this.btnCalcularOpciones.UseVisualStyleBackColor = true;
             this.btnCalcularOpciones.Click += new System.EventHandler(this.button1_Click);
             // 
+            // optFactorial
+            // 
+            this.optFactorial.AutoSize = true;
+            this.optFactorial.Location = new System.Drawing.Point(7, 194);
+            this.optFactorial.Name = "optFactorial";
+            this.optFactorial.Size = new System.Drawing.Size(80, 20);
+            this.optFactorial.TabIndex = 6;
+            this.optFactorial.TabStop = true;
+            this.optFactorial.Text = "Factorial";
+            this.optFactorial.UseVisualStyleBackColor = true;
+            // 
+            // optPrimo
+            // 
+            this.optPrimo.AutoSize = true;
+            this.optPrimo.Location = new System.Drawing.Point(7, 221);
+            this.optPrimo.Name = "optPrimo";
+            this.optPrimo.Size = new System.Drawing.Size(63, 20);
+            this.optPrimo.TabIndex = 7;
+            this.optPrimo.TabStop = true;
+            this.optPrimo.Text = "Primo";
+            this.optPrimo.UseVisualStyleBackColor = true;
+            // 
             // Opciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -241,5 +267,7 @@
         private System.Windows.Forms.RadioButton optResta;
         private System.Windows.Forms.ComboBox cboOpciones;
         private System.Windows.Forms.Button btnCalcularOpciones;
+        private System.Windows.Forms.RadioButton optPrimo;
+        private System.Windows.Forms.RadioButton optFactorial;
     }
 }
