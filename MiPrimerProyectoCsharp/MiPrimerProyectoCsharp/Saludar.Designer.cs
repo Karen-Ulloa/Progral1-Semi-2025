@@ -1,6 +1,6 @@
 ﻿namespace MiPrimerProyectoCsharp
 {
-    partial class Form1
+    partial class Saludar
     {
         /// <summary>
         /// Variable del diseñador necesaria.
