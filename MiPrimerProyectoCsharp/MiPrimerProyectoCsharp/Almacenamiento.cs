@@ -20,7 +20,7 @@ namespace MiPrimerProyectoCsharp
 
         private void btnConvertir_Click(object sender, EventArgs e)
         {
-           
+
             if (!double.TryParse(txtAlmacenamiento.Text, out double cantidad))
             {
                 MessageBox.Show("Por favor, ingrese una cantidad numérica válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -37,7 +37,7 @@ namespace MiPrimerProyectoCsharp
             lblResultado.Text = resultado.ToString("N4") + " " + unidadDestino;
         }
 
-        
+
         private string ObtenerUnidadSeleccionada(GroupBox gb)
         {
             foreach (Control control in gb.Controls)

@@ -58,6 +58,18 @@
     <Compile Include="Almacenamiento.Designer.cs">
       <DependentUpon>Almacenamiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Serie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Serie.Designer.cs">
+      <DependentUpon>Serie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Longitud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +131,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Almacenamiento.resx">
       <DependentUpon>Almacenamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Serie.resx">
+      <DependentUpon>Serie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Longitud.resx">
       <DependentUpon>Longitud.cs</DependentUpon>

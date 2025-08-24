@@ -30,3 +30,5 @@ C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025\MiPrimerProyectoCsharp\MiPrim
 C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.Longitud.resources
 C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.Masa.resources
 C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.Tiempo.resources
+C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.Form5.resources
+C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.Serie.resources
