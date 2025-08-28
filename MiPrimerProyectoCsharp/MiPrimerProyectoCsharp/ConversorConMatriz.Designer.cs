@@ -1,6 +1,6 @@
 ﻿namespace MiPrimerProyectoCsharp
 {
-    partial class Form5
+    partial class ConversorConMatriz
     {
         /// <summary>
         /// Required designer variable.
@@ -118,11 +118,13 @@
             "Masa",
             "Volumen",
             "Almacenamiento",
-            "Tiempo"});
+            "Tiempo",
+            "Area"});
             this.cboTipoConversor.Location = new System.Drawing.Point(109, 49);
             this.cboTipoConversor.Name = "cboTipoConversor";
             this.cboTipoConversor.Size = new System.Drawing.Size(200, 24);
             this.cboTipoConversor.TabIndex = 23;
+            this.cboTipoConversor.SelectedIndexChanged += new System.EventHandler(this.cboTipoConversor_SelectedIndexChanged);
             // 
             // cboDeConversor
             // 

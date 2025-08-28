@@ -64,11 +64,11 @@
     <Compile Include="Serie.Designer.cs">
       <DependentUpon>Serie.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5.cs">
+    <Compile Include="ConversorConMatriz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="ConversorConMatriz.Designer.cs">
+      <DependentUpon>ConversorConMatriz.cs</DependentUpon>
     </Compile>
     <Compile Include="Longitud.cs">
       <SubType>Form</SubType>
@@ -135,8 +135,8 @@
     <EmbeddedResource Include="Serie.resx">
       <DependentUpon>Serie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="ConversorConMatriz.resx">
+      <DependentUpon>ConversorConMatriz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Longitud.resx">
       <DependentUpon>Longitud.cs</DependentUpon>
