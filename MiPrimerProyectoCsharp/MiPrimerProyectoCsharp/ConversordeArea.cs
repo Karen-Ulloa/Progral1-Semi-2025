@@ -48,5 +48,45 @@ namespace MiPrimerProyectoCsharp
                 lblResultado.Text = cantidad + " " + etiquetas[de][1] + " son " + resultado + " " + etiquetas[a][1];
             }
         }
+
+        private void lblResultado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void a_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboDe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace MiPrimerProyectoCsharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ImpuestoActividades());
+            Application.Run(new Form3());
         }
     }
 }

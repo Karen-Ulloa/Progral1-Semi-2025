@@ -59,6 +59,7 @@
             this.lblResultado.Size = new System.Drawing.Size(105, 20);
             this.lblResultado.TabIndex = 16;
             this.lblResultado.Text = "Resultado :";
+            this.lblResultado.Click += new System.EventHandler(this.lblResultado_Click);
             // 
             // txtCantidad
             // 
@@ -66,6 +67,7 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(94, 22);
             this.txtCantidad.TabIndex = 15;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // label2
             // 
@@ -76,6 +78,7 @@
             this.label2.Size = new System.Drawing.Size(101, 20);
             this.label2.TabIndex = 14;
             this.label2.Text = "Cantidad  :";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -86,6 +89,7 @@
             this.label3.Size = new System.Drawing.Size(31, 20);
             this.label3.TabIndex = 13;
             this.label3.Text = "a :";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // a
             // 
@@ -96,6 +100,7 @@
             this.a.Size = new System.Drawing.Size(41, 20);
             this.a.TabIndex = 12;
             this.a.Text = "de :";
+            this.a.Click += new System.EventHandler(this.a_Click);
             // 
             // cboA
             // 
@@ -112,6 +117,7 @@
             this.cboA.Name = "cboA";
             this.cboA.Size = new System.Drawing.Size(121, 24);
             this.cboA.TabIndex = 11;
+            this.cboA.SelectedIndexChanged += new System.EventHandler(this.cboA_SelectedIndexChanged);
             // 
             // cboDe
             // 
@@ -128,6 +134,7 @@
             this.cboDe.Name = "cboDe";
             this.cboDe.Size = new System.Drawing.Size(121, 24);
             this.cboDe.TabIndex = 10;
+            this.cboDe.SelectedIndexChanged += new System.EventHandler(this.cboDe_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -139,8 +146,9 @@
             this.label1.Size = new System.Drawing.Size(264, 32);
             this.label1.TabIndex = 9;
             this.label1.Text = "Conversor de area";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Form5
+            // ConversordeArea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -154,7 +162,7 @@
             this.Controls.Add(this.cboA);
             this.Controls.Add(this.cboDe);
             this.Controls.Add(this.label1);
-            this.Name = "Form5";
+            this.Name = "ConversordeArea";
             this.Text = "Form5";
             this.ResumeLayout(false);
             this.PerformLayout();
