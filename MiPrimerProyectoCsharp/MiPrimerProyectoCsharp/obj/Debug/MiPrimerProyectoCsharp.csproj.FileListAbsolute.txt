@@ -59,3 +59,4 @@ C:\Users\Ulloa\OneDrive\Desktop\Repositorio\Progral1-Semi-2025\MiPrimerProyectoC
 C:\Users\Ulloa\OneDrive\Desktop\Repositorio\Progral1-Semi-2025\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.ConversordeArea.resources
 C:\Users\Ulloa\OneDrive\Desktop\Repositorio\Progral1-Semi-2025\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.Form3.resources
 C:\Users\Ulloa\OneDrive\Desktop\Repositorio\Progral1-Semi-2025\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.Calculos.resources
+C:\Users\Ulloa\OneDrive\Desktop\Repositorio\Progral1-Semi-2025\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.LINQ.resources
