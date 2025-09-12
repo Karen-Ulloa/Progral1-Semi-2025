@@ -58,11 +58,17 @@
     <Compile Include="Almacenamiento.Designer.cs">
       <DependentUpon>Almacenamiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Calculos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Calculos.Designer.cs">
+      <DependentUpon>Calculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="matrizyLINQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="matrizyLINQ.Designer.cs">
+      <DependentUpon>matrizyLINQ.cs</DependentUpon>
     </Compile>
     <Compile Include="ImpuestoActividades.cs">
       <SubType>Form</SubType>
@@ -153,8 +159,11 @@
     <EmbeddedResource Include="ConversordeArea.resx">
       <DependentUpon>ConversordeArea.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Calculos.resx">
+      <DependentUpon>Calculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="matrizyLINQ.resx">
+      <DependentUpon>matrizyLINQ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImpuestoActividades.resx">
       <DependentUpon>ImpuestoActividades.cs</DependentUpon>

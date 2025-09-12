@@ -1,6 +1,6 @@
 ﻿namespace MiPrimerProyectoCsharp
 {
-    partial class Form3
+    partial class Calculos
     {
         /// <summary>
         /// Required designer variable.
