@@ -49,9 +49,19 @@
             this.btnEliminarAlumno = new System.Windows.Forms.Button();
             this.btnModificarAlumno = new System.Windows.Forms.Button();
             this.btnAgregarAlumno = new System.Windows.Forms.Button();
+            this.grbBusquedaAlumno = new System.Windows.Forms.GroupBox();
+            this.txtBuscarAlumnos = new System.Windows.Forms.TextBox();
+            this.grdAlumnos = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbDatosAlumno.SuspendLayout();
             this.grbNavegacionAlumno.SuspendLayout();
             this.grbEdicionAlumno.SuspendLayout();
+            this.grbBusquedaAlumno.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdAlumnos)).BeginInit();
             this.SuspendLayout();
             // 
             // grbDatosAlumno
@@ -275,11 +285,97 @@
             this.btnAgregarAlumno.UseVisualStyleBackColor = true;
             this.btnAgregarAlumno.Click += new System.EventHandler(this.btnAgregarAlumno_Click);
             // 
+            // grbBusquedaAlumno
+            // 
+            this.grbBusquedaAlumno.Controls.Add(this.grdAlumnos);
+            this.grbBusquedaAlumno.Controls.Add(this.txtBuscarAlumnos);
+            this.grbBusquedaAlumno.Location = new System.Drawing.Point(434, 28);
+            this.grbBusquedaAlumno.Name = "grbBusquedaAlumno";
+            this.grbBusquedaAlumno.Size = new System.Drawing.Size(684, 308);
+            this.grbBusquedaAlumno.TabIndex = 3;
+            this.grbBusquedaAlumno.TabStop = false;
+            this.grbBusquedaAlumno.Text = "Busqueda Alumnos";
+            // 
+            // txtBuscarAlumnos
+            // 
+            this.txtBuscarAlumnos.Location = new System.Drawing.Point(6, 31);
+            this.txtBuscarAlumnos.Name = "txtBuscarAlumnos";
+            this.txtBuscarAlumnos.Size = new System.Drawing.Size(649, 22);
+            this.txtBuscarAlumnos.TabIndex = 6;
+            this.txtBuscarAlumnos.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarAlumnos_KeyUp);
+            // 
+            // grdAlumnos
+            // 
+            this.grdAlumnos.AllowUserToAddRows = false;
+            this.grdAlumnos.AllowUserToDeleteRows = false;
+            this.grdAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdAlumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.Codigo,
+            this.Nombre,
+            this.Direccion,
+            this.Telefono});
+            this.grdAlumnos.Location = new System.Drawing.Point(6, 59);
+            this.grdAlumnos.Name = "grdAlumnos";
+            this.grdAlumnos.ReadOnly = true;
+            this.grdAlumnos.RowHeadersWidth = 51;
+            this.grdAlumnos.RowTemplate.Height = 24;
+            this.grdAlumnos.Size = new System.Drawing.Size(649, 243);
+            this.grdAlumnos.TabIndex = 7;
+            this.grdAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdAlumnos_CellClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "idAlumno";
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            this.id.Width = 125;
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "codigo";
+            this.Codigo.HeaderText = "CODIGO";
+            this.Codigo.MinimumWidth = 6;
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 125;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "nombre";
+            this.Nombre.HeaderText = "NOMBRE";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 150;
+            // 
+            // Direccion
+            // 
+            this.Direccion.DataPropertyName = "direccion";
+            this.Direccion.HeaderText = "DIRECCION";
+            this.Direccion.MinimumWidth = 6;
+            this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
+            this.Direccion.Width = 200;
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "telefono";
+            this.Telefono.HeaderText = "TEL";
+            this.Telefono.MinimumWidth = 6;
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            this.Telefono.Width = 125;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 459);
+            this.ClientSize = new System.Drawing.Size(1164, 459);
+            this.Controls.Add(this.grbBusquedaAlumno);
             this.Controls.Add(this.grbEdicionAlumno);
             this.Controls.Add(this.grbNavegacionAlumno);
             this.Controls.Add(this.grbDatosAlumno);
@@ -291,6 +387,9 @@
             this.grbNavegacionAlumno.ResumeLayout(false);
             this.grbNavegacionAlumno.PerformLayout();
             this.grbEdicionAlumno.ResumeLayout(false);
+            this.grbBusquedaAlumno.ResumeLayout(false);
+            this.grbBusquedaAlumno.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdAlumnos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -318,5 +417,13 @@
         private System.Windows.Forms.Button btnModificarAlumno;
         private System.Windows.Forms.Button btnAgregarAlumno;
         private System.Windows.Forms.Label lblnRegistrosAlumno;
+        private System.Windows.Forms.GroupBox grbBusquedaAlumno;
+        private System.Windows.Forms.DataGridView grdAlumnos;
+        private System.Windows.Forms.TextBox txtBuscarAlumnos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
     }
 }
