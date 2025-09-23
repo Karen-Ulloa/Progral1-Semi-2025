@@ -30,12 +30,14 @@ namespace MiPrimerProyectoCsharp
             objComando.Connection = objConexion; //Establecer la conexion para ejecutar los comandos.
 
             objAdaptador.SelectCommand = objComando; //Establecer el comando de seleccion
-
+            objComando.CommandText = "SELECT * FROM Docentes";
+            objAdaptador.Fill(objDs, "Docentes");
             objComando.CommandText = "SELECT * FROM alumnos";
             objAdaptador.Fill(objDs, "alumnos");//Tomando los datos de la BD y llenando el DataSet
 
             return objDs;
         }
+        
         public string administrarDatosAlumnos(String[] datos, String accion)  {
             String sql = "";
             if (accion == "nuevo")    {
@@ -67,6 +69,47 @@ namespace MiPrimerProyectoCsharp
                 return ex.Message;
             }
         }
+
+        public string administrarDatosDocentes(String[] datos, String accion) {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+                sql = "INSERT INTO docentes(nombre,apellido,especialidad,direccion,telefono) VALUES (@nombre, @apellido, @especialidad, @direccion, @telefono)";
+            }
+            else if (accion == "modificar")
+            {
+                sql = "UPDATE docentes SET nombre=@nombre, apellido=@apellido, especialidad=@especialidad, direccion=@direccion, telefono=@telefono WHERE idAlumno=@idAlumno";
+            }
+            else if (accion == "eliminar")
+            {
+                sql = "DELETE FROM docentes WHERE idDocente=@idDocente";
+            }
+            return ejecutarSQL(sql, datos);
+        }
+        private String ejecutaSQL(String sql, String[] datos)
+        {
+            try
+            {
+                objComando.Connection = objConexion;
+                objComando.CommandText = sql;
+
+                objComando.Parameters.Clear();
+                objComando.Parameters.AddWithValue("@idDocente", datos[0]);
+                objComando.Parameters.AddWithValue("@nombre", datos[1]);
+                objComando.Parameters.AddWithValue("@apellido", datos[2]);
+                objComando.Parameters.AddWithValue("@especialidad", datos[3]);
+                objComando.Parameters.AddWithValue("@direccion", datos[4]);
+                objComando.Parameters.AddWithValue("@telefono", datos[5]);
+
+                return objComando.ExecuteNonQuery().ToString();
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
     }
 }
+
+
 
