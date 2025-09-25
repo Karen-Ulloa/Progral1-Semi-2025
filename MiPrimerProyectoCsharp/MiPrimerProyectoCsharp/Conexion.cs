@@ -30,6 +30,8 @@ namespace MiPrimerProyectoCsharp
             objComando.Connection = objConexion; //Establecer la conexion para ejecutar los comandos.
 
             objAdaptador.SelectCommand = objComando; //Establecer el comando de seleccion
+            objComando.CommandText = "SELECT * FROM Materias";
+            objAdaptador.Fill(objDs, "Materias");
             objComando.CommandText = "SELECT * FROM Docentes";
             objAdaptador.Fill(objDs, "Docentes");
             objComando.CommandText = "SELECT * FROM alumnos";
@@ -84,7 +86,7 @@ namespace MiPrimerProyectoCsharp
             {
                 sql = "DELETE FROM docentes WHERE idDocente=@idDocente";
             }
-            return ejecutarSQL(sql, datos);
+            return ejecutaSQL(sql, datos);
         }
         private String ejecutaSQL(String sql, String[] datos)
         {
@@ -100,6 +102,41 @@ namespace MiPrimerProyectoCsharp
                 objComando.Parameters.AddWithValue("@especialidad", datos[3]);
                 objComando.Parameters.AddWithValue("@direccion", datos[4]);
                 objComando.Parameters.AddWithValue("@telefono", datos[5]);
+
+                return objComando.ExecuteNonQuery().ToString();
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string administrarDatosMaterias(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+                sql = "INSERT INTO materias(codigo,nombre,UV) VALUES (@codigo, @nombre, @UV)";
+            } else if (accion == "modificar") {
+                sql = "UPDATE alumnos SET codigo=@codigo, nombre=@nombre, UV=@UV,  WHERE idMaterias=@idMaterias";
+            }  else if (accion == "eliminar")   {
+                sql = "DELETE FROM Materia WHERE idMaterias=@idMaterias";
+            }
+            return ejecutaarSQL(sql, datos);
+        }
+        private String ejecutaarSQL(String sql, String[] datos)
+        {
+            try
+            {
+                objComando.Connection = objConexion;
+                objComando.CommandText = sql;
+
+                objComando.Parameters.Clear();
+                objComando.Parameters.AddWithValue("@idMaterias", datos[0]);
+                objComando.Parameters.AddWithValue("@codigo", datos[1]);
+                objComando.Parameters.AddWithValue("@nombre", datos[2]);
+                objComando.Parameters.AddWithValue("@UV", datos[3]);
+                
 
                 return objComando.ExecuteNonQuery().ToString();
             }

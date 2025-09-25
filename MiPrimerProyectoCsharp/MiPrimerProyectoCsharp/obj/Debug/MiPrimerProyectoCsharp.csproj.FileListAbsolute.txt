@@ -74,3 +74,5 @@ C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025.git\MiPrimerProyectoCsharp\Mi
 C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025.git\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.Saludar.resources
 C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025.git\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.Form2.resources
 C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025.git\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.Form4.resources
+C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025.git\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.frmPrincipal.resources
+C:\Users\Ulloa\OneDrive\Desktop\Progral1-Semi-2025.git\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.Form6.resources
