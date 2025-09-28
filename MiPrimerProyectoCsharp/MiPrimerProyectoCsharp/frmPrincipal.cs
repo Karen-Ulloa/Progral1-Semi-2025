@@ -37,5 +37,12 @@ namespace MiPrimerProyectoCsharp
             objMaterias.MdiParent = this;
             objMaterias.Show();
         }
+
+        private void periodosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPeriodos objPeriodos = new frmPeriodos();
+            objPeriodos.MdiParent = this;
+            objPeriodos.Show();
+        }
     }
 }

@@ -348,7 +348,7 @@
             this.Controls.Add(this.grbNavegacionMaterias);
             this.Controls.Add(this.grbDatosMaterias);
             this.Name = "Form6";
-            this.Text = "Form6";
+            this.Text = "AMINISTRADOR DE MATERIAS";
             this.Load += new System.EventHandler(this.Form6_Load);
             this.grbBusquedaMaterias.ResumeLayout(false);
             this.grbBusquedaMaterias.PerformLayout();
