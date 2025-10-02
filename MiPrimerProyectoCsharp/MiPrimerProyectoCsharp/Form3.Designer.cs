@@ -50,13 +50,13 @@
             this.btnModificarAlumno = new System.Windows.Forms.Button();
             this.btnAgregarAlumno = new System.Windows.Forms.Button();
             this.grbBusquedaAlumno = new System.Windows.Forms.GroupBox();
-            this.txtBuscarAlumnos = new System.Windows.Forms.TextBox();
             this.grdAlumnos = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtBuscarAlumnos = new System.Windows.Forms.TextBox();
             this.grbDatosAlumno.SuspendLayout();
             this.grbNavegacionAlumno.SuspendLayout();
             this.grbEdicionAlumno.SuspendLayout();
@@ -79,7 +79,7 @@
             this.grbDatosAlumno.Enabled = false;
             this.grbDatosAlumno.Location = new System.Drawing.Point(38, 28);
             this.grbDatosAlumno.Name = "grbDatosAlumno";
-            this.grbDatosAlumno.Size = new System.Drawing.Size(380, 308);
+            this.grbDatosAlumno.Size = new System.Drawing.Size(380, 282);
             this.grbDatosAlumno.TabIndex = 0;
             this.grbDatosAlumno.TabStop = false;
             this.grbDatosAlumno.Text = "DATOS";
@@ -179,9 +179,9 @@
             this.grbNavegacionAlumno.Controls.Add(this.btnSiguienteAlumno);
             this.grbNavegacionAlumno.Controls.Add(this.btnAnteriorAlumno);
             this.grbNavegacionAlumno.Controls.Add(this.btnPrimeroAlumno);
-            this.grbNavegacionAlumno.Location = new System.Drawing.Point(38, 369);
+            this.grbNavegacionAlumno.Location = new System.Drawing.Point(38, 316);
             this.grbNavegacionAlumno.Name = "grbNavegacionAlumno";
-            this.grbNavegacionAlumno.Size = new System.Drawing.Size(321, 78);
+            this.grbNavegacionAlumno.Size = new System.Drawing.Size(321, 62);
             this.grbNavegacionAlumno.TabIndex = 1;
             this.grbNavegacionAlumno.TabStop = false;
             this.grbNavegacionAlumno.Text = "NAVEGACION";
@@ -245,9 +245,9 @@
             this.grbEdicionAlumno.Controls.Add(this.btnEliminarAlumno);
             this.grbEdicionAlumno.Controls.Add(this.btnModificarAlumno);
             this.grbEdicionAlumno.Controls.Add(this.btnAgregarAlumno);
-            this.grbEdicionAlumno.Location = new System.Drawing.Point(376, 369);
+            this.grbEdicionAlumno.Location = new System.Drawing.Point(38, 383);
             this.grbEdicionAlumno.Name = "grbEdicionAlumno";
-            this.grbEdicionAlumno.Size = new System.Drawing.Size(452, 78);
+            this.grbEdicionAlumno.Size = new System.Drawing.Size(452, 64);
             this.grbEdicionAlumno.TabIndex = 2;
             this.grbEdicionAlumno.TabStop = false;
             this.grbEdicionAlumno.Text = "EDICION";
@@ -295,14 +295,6 @@
             this.grbBusquedaAlumno.TabIndex = 3;
             this.grbBusquedaAlumno.TabStop = false;
             this.grbBusquedaAlumno.Text = "Busqueda Alumnos";
-            // 
-            // txtBuscarAlumnos
-            // 
-            this.txtBuscarAlumnos.Location = new System.Drawing.Point(6, 31);
-            this.txtBuscarAlumnos.Name = "txtBuscarAlumnos";
-            this.txtBuscarAlumnos.Size = new System.Drawing.Size(649, 22);
-            this.txtBuscarAlumnos.TabIndex = 6;
-            this.txtBuscarAlumnos.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarAlumnos_KeyUp);
             // 
             // grdAlumnos
             // 
@@ -369,6 +361,14 @@
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
             this.Telefono.Width = 125;
+            // 
+            // txtBuscarAlumnos
+            // 
+            this.txtBuscarAlumnos.Location = new System.Drawing.Point(6, 31);
+            this.txtBuscarAlumnos.Name = "txtBuscarAlumnos";
+            this.txtBuscarAlumnos.Size = new System.Drawing.Size(649, 22);
+            this.txtBuscarAlumnos.TabIndex = 6;
+            this.txtBuscarAlumnos.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarAlumnos_KeyUp);
             // 
             // Form3
             // 

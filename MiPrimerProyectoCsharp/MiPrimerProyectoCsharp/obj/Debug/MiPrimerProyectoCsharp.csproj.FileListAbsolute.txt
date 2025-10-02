@@ -106,3 +106,4 @@ C:\Users\Ulloa\OneDrive\Desktop\Repositorio\Progral1-Semi-2025.git\MiPrimerProye
 C:\Users\Ulloa\OneDrive\Desktop\Repositorio\Progral1-Semi-2025.git\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.exe
 C:\Users\Ulloa\OneDrive\Desktop\Repositorio\Progral1-Semi-2025.git\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.pdb
 C:\Users\Ulloa\OneDrive\Desktop\Repositorio\Progral1-Semi-2025.git\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.frmPeriodos.resources
+C:\Users\Ulloa\OneDrive\Desktop\Repositorio\Progral1-Semi-2025.git\MiPrimerProyectoCsharp\MiPrimerProyectoCsharp\obj\Debug\MiPrimerProyectoCsharp.frmNotas.resources

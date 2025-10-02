@@ -65,9 +65,9 @@
             // 
             this.grbBusquedaMaterias.Controls.Add(this.grdMaterias);
             this.grbBusquedaMaterias.Controls.Add(this.txtBuscarMaterias);
-            this.grbBusquedaMaterias.Location = new System.Drawing.Point(538, 42);
+            this.grbBusquedaMaterias.Location = new System.Drawing.Point(512, 32);
             this.grbBusquedaMaterias.Name = "grbBusquedaMaterias";
-            this.grbBusquedaMaterias.Size = new System.Drawing.Size(574, 308);
+            this.grbBusquedaMaterias.Size = new System.Drawing.Size(544, 308);
             this.grbBusquedaMaterias.TabIndex = 7;
             this.grbBusquedaMaterias.TabStop = false;
             this.grbBusquedaMaterias.Text = "Busqueda Materias";
@@ -87,7 +87,7 @@
             this.grdMaterias.ReadOnly = true;
             this.grdMaterias.RowHeadersWidth = 51;
             this.grdMaterias.RowTemplate.Height = 24;
-            this.grdMaterias.Size = new System.Drawing.Size(511, 243);
+            this.grdMaterias.Size = new System.Drawing.Size(501, 243);
             this.grdMaterias.TabIndex = 7;
             this.grdMaterias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdMaterias_CellClick);
             // 
@@ -132,7 +132,7 @@
             // 
             this.txtBuscarMaterias.Location = new System.Drawing.Point(19, 31);
             this.txtBuscarMaterias.Name = "txtBuscarMaterias";
-            this.txtBuscarMaterias.Size = new System.Drawing.Size(511, 22);
+            this.txtBuscarMaterias.Size = new System.Drawing.Size(501, 22);
             this.txtBuscarMaterias.TabIndex = 6;
             this.txtBuscarMaterias.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscarMaterias_KeyUp);
             // 
@@ -141,7 +141,7 @@
             this.grbEdicionMaterias.Controls.Add(this.btnEliminarMaterias);
             this.grbEdicionMaterias.Controls.Add(this.btnModificarMateria);
             this.grbEdicionMaterias.Controls.Add(this.btnAgregarMateria);
-            this.grbEdicionMaterias.Location = new System.Drawing.Point(368, 373);
+            this.grbEdicionMaterias.Location = new System.Drawing.Point(30, 434);
             this.grbEdicionMaterias.Name = "grbEdicionMaterias";
             this.grbEdicionMaterias.Size = new System.Drawing.Size(452, 78);
             this.grbEdicionMaterias.TabIndex = 6;
@@ -188,7 +188,7 @@
             this.grbNavegacionMaterias.Controls.Add(this.btnSiguienteMaterias);
             this.grbNavegacionMaterias.Controls.Add(this.btnAnteriorMaterias);
             this.grbNavegacionMaterias.Controls.Add(this.btnPrimeroMaterias);
-            this.grbNavegacionMaterias.Location = new System.Drawing.Point(30, 373);
+            this.grbNavegacionMaterias.Location = new System.Drawing.Point(30, 350);
             this.grbNavegacionMaterias.Name = "grbNavegacionMaterias";
             this.grbNavegacionMaterias.Size = new System.Drawing.Size(321, 78);
             this.grbNavegacionMaterias.TabIndex = 5;
@@ -262,7 +262,7 @@
             this.grbDatosMaterias.Enabled = false;
             this.grbDatosMaterias.Location = new System.Drawing.Point(30, 32);
             this.grbDatosMaterias.Name = "grbDatosMaterias";
-            this.grbDatosMaterias.Size = new System.Drawing.Size(460, 308);
+            this.grbDatosMaterias.Size = new System.Drawing.Size(370, 308);
             this.grbDatosMaterias.TabIndex = 4;
             this.grbDatosMaterias.TabStop = false;
             this.grbDatosMaterias.Text = "DATOS";

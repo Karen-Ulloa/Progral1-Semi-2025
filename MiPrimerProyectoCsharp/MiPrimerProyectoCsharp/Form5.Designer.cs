@@ -71,7 +71,7 @@
             // 
             this.grbBusquedaDocente.Controls.Add(this.grdDocentes);
             this.grbBusquedaDocente.Controls.Add(this.txtBuscarDocentes);
-            this.grbBusquedaDocente.Location = new System.Drawing.Point(423, 29);
+            this.grbBusquedaDocente.Location = new System.Drawing.Point(405, 29);
             this.grbBusquedaDocente.Name = "grbBusquedaDocente";
             this.grbBusquedaDocente.Size = new System.Drawing.Size(760, 308);
             this.grbBusquedaDocente.TabIndex = 7;
@@ -167,9 +167,9 @@
             this.grbEdicionDocente.Controls.Add(this.btnEliminarDocente);
             this.grbEdicionDocente.Controls.Add(this.btnModificarDocente);
             this.grbEdicionDocente.Controls.Add(this.btnAgregarDocente);
-            this.grbEdicionDocente.Location = new System.Drawing.Point(550, 370);
+            this.grbEdicionDocente.Location = new System.Drawing.Point(26, 433);
             this.grbEdicionDocente.Name = "grbEdicionDocente";
-            this.grbEdicionDocente.Size = new System.Drawing.Size(452, 93);
+            this.grbEdicionDocente.Size = new System.Drawing.Size(452, 71);
             this.grbEdicionDocente.TabIndex = 6;
             this.grbEdicionDocente.TabStop = false;
             this.grbEdicionDocente.Text = "EDICION";
@@ -177,7 +177,7 @@
             // btnEliminarDocente
             // 
             this.btnEliminarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarDocente.Location = new System.Drawing.Point(330, 34);
+            this.btnEliminarDocente.Location = new System.Drawing.Point(324, 21);
             this.btnEliminarDocente.Name = "btnEliminarDocente";
             this.btnEliminarDocente.Size = new System.Drawing.Size(116, 34);
             this.btnEliminarDocente.TabIndex = 3;
@@ -188,7 +188,7 @@
             // btnModificarDocente
             // 
             this.btnModificarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarDocente.Location = new System.Drawing.Point(159, 34);
+            this.btnModificarDocente.Location = new System.Drawing.Point(153, 21);
             this.btnModificarDocente.Name = "btnModificarDocente";
             this.btnModificarDocente.Size = new System.Drawing.Size(124, 34);
             this.btnModificarDocente.TabIndex = 1;
@@ -199,7 +199,7 @@
             // btnAgregarDocente
             // 
             this.btnAgregarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarDocente.Location = new System.Drawing.Point(6, 34);
+            this.btnAgregarDocente.Location = new System.Drawing.Point(0, 21);
             this.btnAgregarDocente.Name = "btnAgregarDocente";
             this.btnAgregarDocente.Size = new System.Drawing.Size(109, 34);
             this.btnAgregarDocente.TabIndex = 0;
@@ -214,9 +214,9 @@
             this.grbNavegacionDocente.Controls.Add(this.btnSiguienteDocente);
             this.grbNavegacionDocente.Controls.Add(this.btnAnteriorDocente);
             this.grbNavegacionDocente.Controls.Add(this.btnPrimeroDocente);
-            this.grbNavegacionDocente.Location = new System.Drawing.Point(26, 370);
+            this.grbNavegacionDocente.Location = new System.Drawing.Point(26, 337);
             this.grbNavegacionDocente.Name = "grbNavegacionDocente";
-            this.grbNavegacionDocente.Size = new System.Drawing.Size(363, 99);
+            this.grbNavegacionDocente.Size = new System.Drawing.Size(363, 76);
             this.grbNavegacionDocente.TabIndex = 5;
             this.grbNavegacionDocente.TabStop = false;
             this.grbNavegacionDocente.Text = "NAVEGACION";
@@ -234,9 +234,9 @@
             // btnUltimoDocente
             // 
             this.btnUltimoDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUltimoDocente.Location = new System.Drawing.Point(310, 21);
+            this.btnUltimoDocente.Location = new System.Drawing.Point(302, 21);
             this.btnUltimoDocente.Name = "btnUltimoDocente";
-            this.btnUltimoDocente.Size = new System.Drawing.Size(41, 72);
+            this.btnUltimoDocente.Size = new System.Drawing.Size(49, 47);
             this.btnUltimoDocente.TabIndex = 3;
             this.btnUltimoDocente.Text = ">|";
             this.btnUltimoDocente.UseVisualStyleBackColor = true;
@@ -245,9 +245,9 @@
             // btnSiguienteDocente
             // 
             this.btnSiguienteDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguienteDocente.Location = new System.Drawing.Point(264, 21);
+            this.btnSiguienteDocente.Location = new System.Drawing.Point(243, 21);
             this.btnSiguienteDocente.Name = "btnSiguienteDocente";
-            this.btnSiguienteDocente.Size = new System.Drawing.Size(40, 72);
+            this.btnSiguienteDocente.Size = new System.Drawing.Size(40, 47);
             this.btnSiguienteDocente.TabIndex = 2;
             this.btnSiguienteDocente.Text = ">";
             this.btnSiguienteDocente.UseVisualStyleBackColor = true;
@@ -256,9 +256,9 @@
             // btnAnteriorDocente
             // 
             this.btnAnteriorDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnteriorDocente.Location = new System.Drawing.Point(59, 21);
+            this.btnAnteriorDocente.Location = new System.Drawing.Point(71, 21);
             this.btnAnteriorDocente.Name = "btnAnteriorDocente";
-            this.btnAnteriorDocente.Size = new System.Drawing.Size(36, 72);
+            this.btnAnteriorDocente.Size = new System.Drawing.Size(46, 47);
             this.btnAnteriorDocente.TabIndex = 1;
             this.btnAnteriorDocente.Text = "<";
             this.btnAnteriorDocente.UseVisualStyleBackColor = true;
@@ -269,7 +269,7 @@
             this.btnPrimeroDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrimeroDocente.Location = new System.Drawing.Point(14, 21);
             this.btnPrimeroDocente.Name = "btnPrimeroDocente";
-            this.btnPrimeroDocente.Size = new System.Drawing.Size(39, 72);
+            this.btnPrimeroDocente.Size = new System.Drawing.Size(51, 47);
             this.btnPrimeroDocente.TabIndex = 0;
             this.btnPrimeroDocente.Text = "|<";
             this.btnPrimeroDocente.UseVisualStyleBackColor = true;
@@ -292,7 +292,7 @@
             this.grbDatosDocente.Enabled = false;
             this.grbDatosDocente.Location = new System.Drawing.Point(26, 29);
             this.grbDatosDocente.Name = "grbDatosDocente";
-            this.grbDatosDocente.Size = new System.Drawing.Size(363, 308);
+            this.grbDatosDocente.Size = new System.Drawing.Size(363, 302);
             this.grbDatosDocente.TabIndex = 4;
             this.grbDatosDocente.TabStop = false;
             this.grbDatosDocente.Text = "DATOS";
