@@ -12,9 +12,9 @@ namespace MiPrimerProyectoCsharp
     internal class Conexion
     {
         //Definir los mienbros de la clase, atributos y metodos.
-        SqlConnection objConexion = new SqlConnection(); //Conectarme a la BD.
-        SqlCommand objComando = new SqlCommand(); //Ejecutar SQL en la BD. Lectura, Actualizacion, Eliminacion, Insercion.
-        SqlDataAdapter objAdaptador = new SqlDataAdapter(); //Un puente entre la BD y la aplicación
+        public SqlConnection objConexion = new SqlConnection(); //Conectarme a la BD.
+        public SqlCommand objComando = new SqlCommand(); //Ejecutar SQL en la BD. Lectura, Actualizacion, Eliminacion, Insercion.
+        public SqlDataAdapter objAdaptador = new SqlDataAdapter(); //Un puente entre la BD y la aplicación
         DataSet objDs = new DataSet(); //Es una representación de la arquitectura de la BD en memoria.
 
         public Conexion()
@@ -32,83 +32,50 @@ namespace MiPrimerProyectoCsharp
             objAdaptador.SelectCommand = objComando; //Establecer el comando de seleccion
             objComando.CommandText = "SELECT * FROM Materias";
             objAdaptador.Fill(objDs, "Materias");
+
             objComando.CommandText = "SELECT * FROM Docentes";
             objAdaptador.Fill(objDs, "Docentes");
+
             objComando.CommandText = "SELECT * FROM alumnos";
             objAdaptador.Fill(objDs, "alumnos");//Tomando los datos de la BD y llenando el DataSet
 
             return objDs;
         }
-        
-        public string administrarDatosAlumnos(String[] datos, String accion)  {
-            String sql = "";
-            if (accion == "nuevo")    {
-                sql = "INSERT INTO alumnos(codigo,nombre,direccion,telefono) VALUES (@codigo, @nombre, @direccion, @telefono)";
-            }
-            else if (accion == "modificar")   {
-                sql = "UPDATE alumnos SET codigo=@codigo, nombre=@nombre, direccion=@direccion, telefono=@telefono WHERE idAlumno=@idAlumno";
-            }   else if (accion == "eliminar")   {
-                sql = "DELETE FROM alumnos WHERE idAlumno=@idAlumno";
-            }
-            return ejecutarSQL(sql, datos);
-        }
-        private String ejecutarSQL(String sql, String[] datos)
+
+        public string administrarDatosAlumnos(String[] datos, String accion)
         {
-            try
-            {
-                objComando.Connection = objConexion;
-                objComando.CommandText = sql;
-
-                objComando.Parameters.Clear();
-                objComando.Parameters.AddWithValue("@idAlumno", datos[0]);
-                objComando.Parameters.AddWithValue("@codigo", datos[1]);
-                objComando.Parameters.AddWithValue("@nombre", datos[2]);
-                objComando.Parameters.AddWithValue("@direccion", datos[3]);
-                objComando.Parameters.AddWithValue("@telefono", datos[4]);
-
-                return objComando.ExecuteNonQuery().ToString();
-            }  catch (Exception ex)    {
-                return ex.Message;
-            }
-        }
-
-        public string administrarDatosDocentes(String[] datos, String accion) {
             String sql = "";
             if (accion == "nuevo")
             {
-                sql = "INSERT INTO docentes(nombre,apellido,especialidad,direccion,telefono) VALUES (@nombre, @apellido, @especialidad, @direccion, @telefono)";
+                sql = "INSERT INTO alumnos(codigo,nombre,direccion,telefono) VALUES ('" + datos[1] + "', '" + datos[2] + "', '" + datos[3] + "', '" + datos[4] + "')";
             }
             else if (accion == "modificar")
             {
-                sql = "UPDATE docentes SET nombre=@nombre, apellido=@apellido, especialidad=@especialidad, direccion=@direccion, telefono=@telefono WHERE idAlumno=@idAlumno";
+                sql = "UPDATE alumnos SET codigo='" + datos[1] + "', nombre='" + datos[2] + "', direccion='" + datos[3] + "', telefono='" + datos[4] + "' WHERE idAlumno='" + datos[0] + "'";
             }
             else if (accion == "eliminar")
             {
-                sql = "DELETE FROM docentes WHERE idDocente=@idDocente";
+                sql = "DELETE FROM alumnos WHERE idAlumno='" + datos[0] + "'";
             }
-            return ejecutaSQL(sql, datos);
+            return ejecutarSQL(sql);
         }
-        private String ejecutaSQL(String sql, String[] datos)
+
+        public string administrarDatosDocentes(String[] datos, String accion)
         {
-            try
+            String sql = "";
+            if (accion == "nuevo")
             {
-                objComando.Connection = objConexion;
-                objComando.CommandText = sql;
-
-                objComando.Parameters.Clear();
-                objComando.Parameters.AddWithValue("@idDocente", datos[0]);
-                objComando.Parameters.AddWithValue("@nombre", datos[1]);
-                objComando.Parameters.AddWithValue("@apellido", datos[2]);
-                objComando.Parameters.AddWithValue("@especialidad", datos[3]);
-                objComando.Parameters.AddWithValue("@direccion", datos[4]);
-                objComando.Parameters.AddWithValue("@telefono", datos[5]);
-
-                return objComando.ExecuteNonQuery().ToString();
+                sql = "INSERT INTO docentes(nombre,apellido,especialidad,direccion,telefono) VALUES ('" + datos[1] + "', '" + datos[2] + "', '" + datos[3] + "', '" + datos[4] + "','" + datos[5] + "')";
             }
-            catch (Exception ex)
+            else if (accion == "modificar")
             {
-                return ex.Message;
+                sql = "UPDATE docentes SET nombre='" + datos[1] + "', apellido='" + datos[2] + "', especialidad='" + datos[3] + "', direccion='" + datos[4] + "', telefono='" + datos[5] + "' WHERE idAlumno='" + datos[0] + "'";
             }
+            else if (accion == "eliminar")
+            {
+                sql = "DELETE FROM docentes WHERE idDocnete='" + datos[0] + "'";
+            }
+            return ejecutarSQL(sql);
         }
 
         public string administrarDatosMaterias(String[] datos, String accion)
@@ -116,28 +83,25 @@ namespace MiPrimerProyectoCsharp
             String sql = "";
             if (accion == "nuevo")
             {
-                sql = "INSERT INTO materias(codigo,nombre,UV) VALUES (@codigo, @nombre, @UV)";
-            } else if (accion == "modificar") {
-                sql = "UPDATE alumnos SET codigo=@codigo, nombre=@nombre, UV=@UV,  WHERE idMaterias=@idMaterias";
-            }  else if (accion == "eliminar")   {
-                sql = "DELETE FROM Materia WHERE idMaterias=@idMaterias";
+                sql = "INSERT INTO materias(codigo,nombre,uv) VALUES ('" + datos[1] + "', '" + datos[2] + "', '" + datos[3] + "')";
             }
-            return ejecutaarSQL(sql, datos);
+            else if (accion == "modificar")
+            {
+                sql = "UPDATE materias SET codigo='" + datos[1] + "', nombre='" + datos[2] + "', uv='" + datos[3] + "' WHERE idMateria='" + datos[0] + "'";
+            }
+            else if (accion == "eliminar")
+            {
+                sql = "DELETE FROM materias WHERE idMateria='" + datos[0] + "'";
+            }
+            return ejecutarSQL(sql);
         }
-        private String ejecutaarSQL(String sql, String[] datos)
+
+        public String ejecutarSQL(String sql)
         {
             try
             {
                 objComando.Connection = objConexion;
                 objComando.CommandText = sql;
-
-                objComando.Parameters.Clear();
-                objComando.Parameters.AddWithValue("@idMaterias", datos[0]);
-                objComando.Parameters.AddWithValue("@codigo", datos[1]);
-                objComando.Parameters.AddWithValue("@nombre", datos[2]);
-                objComando.Parameters.AddWithValue("@UV", datos[3]);
-                
-
                 return objComando.ExecuteNonQuery().ToString();
             }
             catch (Exception ex)
@@ -145,8 +109,10 @@ namespace MiPrimerProyectoCsharp
                 return ex.Message;
             }
         }
+     
+        }
     }
-}
+
 
 
 
