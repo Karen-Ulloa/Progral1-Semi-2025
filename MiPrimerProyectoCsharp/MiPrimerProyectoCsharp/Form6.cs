@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace MiPrimerProyectoCsharp
 {
-    public partial class Form6 : Form
-    {
-        public Form6()
-        {
+    public partial class Form6 : Form {
+        public Form6() {
             InitializeComponent();
         }
-        Conexion objCOnexion = new Conexion();
+        Conexion_Base_Datos objCOnexion = new Conexion_Base_Datos();
         DataSet objDs = new DataSet();
         DataTable objDt = new DataTable();
 
@@ -40,12 +38,9 @@ namespace MiPrimerProyectoCsharp
                 txtNombreMateria.Text = objDt.Rows[posicion]["nombre"].ToString();
                 txtUV.Text = objDt.Rows[posicion]["UV"].ToString();
                
-
                 lblnRegistrosMaterias.Text = (posicion ) + " de " + objDt.Rows.Count;
             }
         }
-
-       
 
         private void Form6_Load(object sender, EventArgs e) {
             ActualizarDs();
@@ -67,8 +62,7 @@ namespace MiPrimerProyectoCsharp
         }
 
         private void btnAnteriorMaterias_Click(object sender, EventArgs e) {
-            if (posicion > 0)
-            {
+            if (posicion > 0) {
                 posicion--;// posicion=posicion-1
                 mostrarDatos();
             } else  {
@@ -81,22 +75,19 @@ namespace MiPrimerProyectoCsharp
             mostrarDatos();
         }
 
-        private void estadoControles(Boolean estado)
-        {
+        private void estadoControles(Boolean estado)  {
             grbDatosMaterias.Enabled = estado;
             grbNavegacionMaterias.Enabled = !estado;
             btnEliminarMaterias.Enabled = !estado;
         }
-        private void limpiarControles()
-        {
+        private void limpiarControles() {
             idMateria.Text = "";
             txtCodigoMateria.Text = "";
             txtNombreMateria.Text = "";
             txtUV.Text = "";
            
         }
-        private void btnAgregarMaterias_Click(object sender, EventArgs e)
-        {
+        private void btnAgregarMaterias_Click(object sender, EventArgs e)  {
             if (btnAgregarMateria.Text == "Nuevo")
             {
                 btnAgregarMateria.Text = "Guardar";
@@ -110,8 +101,7 @@ namespace MiPrimerProyectoCsharp
                     idMateria.Text, txtCodigoMateria.Text, txtNombreMateria.Text, txtUV.Text,
                 };
                 String respuesta = objCOnexion.administrarDatosMaterias(Materias, accion);
-                if (respuesta != "1")
-                {
+                if (respuesta != "1") {
                     MessageBox.Show(respuesta, "Error al guardar Materia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }  else   {
 
@@ -123,18 +113,14 @@ namespace MiPrimerProyectoCsharp
             }
         }
 
-        private void btnModificarMateria_Click(object sender, EventArgs e)
-        {
-            if (btnModificarMateria.Text == "Modificar")
-            {
+        private void btnModificarMateria_Click(object sender, EventArgs e) {
+            if (btnModificarMateria.Text == "Modificar")  {
                 btnAgregarMateria.Text = "Guardar";
                 btnModificarMateria.Text = "Cancelar";
                 estadoControles(true);
                 accion = "modificar";
 
-            }
-            else
-            {//Cancelar
+            }  else {//Cancelar
                 mostrarDatos();
                 estadoControles(false);
                 btnAgregarMateria.Text = "Nuevo";
@@ -144,13 +130,11 @@ namespace MiPrimerProyectoCsharp
 
         private void btnEliminarMaterias_Click(object sender, EventArgs e) {
             if (MessageBox.Show("Esta seguro de eliminar a " + txtNombreMateria.Text,
-               "Eliminando Materia", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
+               "Eliminando Materia", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)  {
                 String respuesta = objCOnexion.administrarDatosMaterias (
                     new String[] { idMateria.Text, "", "", "", "" }, "eliminar"
                 );
-                if (respuesta != "1")
-                {
+                if (respuesta != "1")  {
                     MessageBox.Show(respuesta, "Error al eliminar Materia.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }  else  {
                     posicion = 0;
@@ -163,16 +147,14 @@ namespace MiPrimerProyectoCsharp
             filtrarDatos(txtBuscarMaterias.Text);
         }
 
-        private void filtrarDatos(String valor)
-        {
+        private void filtrarDatos(String valor)  {
             DataView objDv = objDt.DefaultView;
             objDv.RowFilter = "codigo like '%" + valor + "%' OR nombre like '%" + valor + "%'";
             grdMaterias.DataSource = objDv;
             seleccionarAlumno();
         }
 
-        private void seleccionarAlumno()
-        {
+        private void seleccionarAlumno()  {
             posicion = objDt.Rows.IndexOf(objDt.Rows.Find(grdMaterias.CurrentRow.Cells["id"].Value));
             if (posicion >= 0)
             {
@@ -180,12 +162,10 @@ namespace MiPrimerProyectoCsharp
             }
         }
 
-        private void grdMaterias_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+        private void grdMaterias_CellClick(object sender, DataGridViewCellEventArgs e) {
             seleccionarAlumno();
-        }
+        } 
     }
-
 }
 
 

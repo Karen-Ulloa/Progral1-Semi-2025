@@ -17,7 +17,7 @@ namespace MiPrimerProyectoCsharp
         {
             InitializeComponent();
         }
-        Conexion objConexion = new Conexion();
+        Conexion_Base_Datos objConexion = new Conexion_Base_Datos();
         DataSet objNotas = new DataSet();
 
         private void actualizarDs()

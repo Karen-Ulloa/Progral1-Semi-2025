@@ -230,6 +230,7 @@
             this.lblnRegistrosDocente.Size = new System.Drawing.Size(53, 18);
             this.lblnRegistrosDocente.TabIndex = 9;
             this.lblnRegistrosDocente.Text = "x de n";
+            this.lblnRegistrosDocente.Click += new System.EventHandler(this.lblnRegistrosDocente_Click);
             // 
             // btnUltimoDocente
             // 

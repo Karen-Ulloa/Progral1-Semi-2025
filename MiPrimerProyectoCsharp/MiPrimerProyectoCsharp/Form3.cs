@@ -15,7 +15,7 @@ namespace MiPrimerProyectoCsharp
         public Form3()    {
             InitializeComponent();
         }
-        Conexion objCOnexion = new Conexion();
+        Conexion_Base_Datos objCOnexion = new Conexion_Base_Datos();
         DataSet objDs = new DataSet();
         DataTable objDt = new DataTable();
 

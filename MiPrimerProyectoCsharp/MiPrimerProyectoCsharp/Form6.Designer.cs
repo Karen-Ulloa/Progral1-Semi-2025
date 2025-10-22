@@ -90,6 +90,7 @@
             this.grdMaterias.Size = new System.Drawing.Size(501, 243);
             this.grdMaterias.TabIndex = 7;
             this.grdMaterias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdMaterias_CellClick);
+           
             // 
             // id
             // 
