@@ -11,61 +11,60 @@ namespace webappacademica.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class MateriasController : ControllerBase
+    public class PeriodosController : ControllerBase
     {
         private readonly MyDbContext _context;
 
-        public MateriasController(MyDbContext context)
+        public PeriodosController(MyDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Materias
+        // GET: api/Periodos
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Materia>>> GetMaterias()
+        public async Task<ActionResult<IEnumerable<Periodo>>> GetPeriodos()
         {
-            return await _context.Materias.ToListAsync();
+            return await _context.Periodos.ToListAsync();
         }
-
         // GET: api/Periodos/buscar
         [HttpGet("buscar")]
         public async Task<ActionResult<IEnumerable<Periodo>>> BuscarPeriodo([FromQuery] PeriodoBusquedaParametros parametros) {
             var consulta = _context.Periodos.AsQueryable();
-            if (!string.IsNullOrEmpty(parametros.buscar))  {
-                consulta = consulta.Where(periodo => periodo.periodo.Contains(parametros.buscar));
+            if (!string.IsNullOrEmpty(parametros.buscar)) {
+                consulta = consulta.Where(periodo => periodo.fecha.ToString().Contains(parametros.buscar));
             }
-            if (!string.IsNullOrEmpty(parametros.buscar) && consulta.Count() <= 0) {
+            if (!string.IsNullOrEmpty(parametros.buscar) && consulta.Count() <= 0)
+            {
                 consulta = _context.Periodos.AsQueryable();
                 consulta = consulta.Where(periodo => periodo.periodo.Contains(parametros.buscar));
             }
             return await consulta.ToListAsync();
         }
-
-        // GET: api/Materias/5
+        // GET: api/Periodos/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Materia>> GetMateria(int id)
+        public async Task<ActionResult<Periodo>> GetPeriodo(int id)
         {
-            var materia = await _context.Materias.FindAsync(id);
+            var periodo = await _context.Periodos.FindAsync(id);
 
-            if (materia == null)
+            if (periodo == null)
             {
                 return NotFound();
             }
 
-            return materia;
+            return periodo;
         }
 
-        // PUT: api/Materias/5
+        // PUT: api/Periodos/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutMateria(int id, Materia materia)
+        public async Task<IActionResult> PutPeriodo(int id, Periodo periodo)
         {
-            if (id != materia.idMateria)
+            if (id != periodo.idPeriodo)
             {
                 return BadRequest();
             }
 
-            _context.Entry(materia).State = EntityState.Modified;
+            _context.Entry(periodo).State = EntityState.Modified;
 
             try
             {
@@ -73,7 +72,7 @@ namespace webappacademica.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!MateriaExists(id))
+                if (!PeriodoExists(id))
                 {
                     return NotFound();
                 }
@@ -82,39 +81,40 @@ namespace webappacademica.Controllers
                     throw;
                 }
             }
-            return CreatedAtAction("GetMateria", new { id = materia.idMateria }, materia);
+
+            return CreatedAtAction("GetPeriodo", new { id = periodo.idPeriodo }, periodo);
         }
 
-        // POST: api/Materias
+        // POST: api/Periodos
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Materia>> PostMateria(Materia materia)
+        public async Task<ActionResult<Periodo>> PostPeriodo(Periodo periodo)
         {
-            _context.Materias.Add(materia);
+            _context.Periodos.Add(periodo);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetMateria", new { id = materia.idMateria }, materia);
+            return CreatedAtAction("GetPeriodo", new { id = periodo.idPeriodo }, periodo);
         }
 
-        // DELETE: api/Materias/5
+        // DELETE: api/Periodos/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteMateria(int id)
+        public async Task<IActionResult> DeletePeriodo(int id)
         {
-            var materia = await _context.Materias.FindAsync(id);
-            if (materia == null)
+            var periodo = await _context.Periodos.FindAsync(id);
+            if (periodo == null)
             {
                 return NotFound();
             }
 
-            _context.Materias.Remove(materia);
+            _context.Periodos.Remove(periodo);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool MateriaExists(int id)
+        private bool PeriodoExists(int id)
         {
-            return _context.Materias.Any(e => e.idMateria == id);
+            return _context.Periodos.Any(e => e.idPeriodo == id);
         }
     }
 }
